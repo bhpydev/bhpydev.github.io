@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>南投議題問答集</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body {
+    /* background: linear-gradient(0deg, #fddde6 0%, #ffffcc 100%); */
+    background: linear-gradient(0deg, #ffffff 0%, #fddde6 100%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  }
+  nav {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  nav a {
+    color: black;
+    text-decoration: none;
+    margin-left: 1rem;
+    transition: color 0.3s;
+  }
+  nav a:first-child {
+    margin-left: 0;
+  }
+  nav a:hover {
+    color: #9c6d5b;
+  }
+  .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .vote {
+    width: 100%;
+    height: 200px;
+    aspect-ratio: 1;
+  }
+  .info:before {
+    content: '8/23(六)';
+    animation-name: head;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes head {
+    0% {opacity: 1;}
+    25% {opacity: 0;content: ""}
+    50% {opacity: 1; content: "罷免投票"}
+    75% {opacity: 0;content: ""}
+    100% {opacity: 1; content: "8/23(六)"}
+  }
+  .title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sub-title {
+    font-size: 1.2rem;
+  }
+  .hightlight {
+    color: #e3005b;
+    display: inline-block;
+  }
+  #portfolio {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  article {
+    max-width: 350px;
+  }
+  article h2 {
+    font-weight: 700;
+    font-size: 1.375rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+  [id^="imgControl-"] {
+    display: none;
+  }
+  [id^="imgControl-"]:checked + label > img {
+    display: none;
+  }
+  [id^="imgControl-"]:checked + label > .description {
+    display: block;
+  }
+  article label {
+    position: relative;
+    max-width: 350px;
+    height: 290px;
+    display: block;
+  }
+  article img {
+    width: 100%;
+    height: 290px;
+    border-radius: 0.5rem;
+    object-fit: fill;
+    display: block;
+  }
+  article div.description {
+    height: 290px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+  }
+  article a {
+    color: #f96400;
+    text-decoration:dotted underline;
+    font-weight: 600;
+  }
+  @media (min-width: 768px) {
+    #portfolio {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    article {
+      flex: 1 1 calc(33% - 2rem);
+    }
+  }
+</style>
+</head>
+<body>
+  <header class="flex justify-between max-w-7xl mx-auto px-6 py-6 items-center nav">
+    <nav class="flex flex-row w-full justify-between max-w-7xl mx-auto px-6">
+      <div class="left-nav nav"><img class="icon" src="icon.jpg" alt="" /></div>
+      <div class="right-nav nav flex">
+        <!-- <a href="#">PHILOSOPHY</a> -->
+        <a class="info" href="#"></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="text-center title">為什麼不能給游顥做4年？</h2>
+    <div class="text-center sub-title">↓↓&nbsp;7重點報您知&nbsp;↓↓</div>
+    <div class="text-center sub-title">(點圖卡👆看更多)</div>
+    <br>
+    <section id="portfolio" class="mx-auto px-6"></section>
+    <h2 class="text-center sub-title">--</h2>
+    <h2 class="text-center sub-title">人民是頭家、立委是公僕</h2>
+    <h2 class="text-center sub-title">員工不合格、解雇止損要快</h2>
+    <h2 class="text-center sub-title">若您不滿意游顥表現</h2>
+    <h2 class="text-center sub-title"><p class="hightlight">8/23(六)</p> 請投<p class="hightlight">同意</p>罷免</h2>
+    <img class="vote" src="vote.PNG" alt="" />
+  </main>
+
+  <script id="data-json" type="application/json">
+  [
+    {
+      "image": "public_insureance.png",
+      "title": "游顥不倒，健保會倒",
+      "description": "😵讓中配更容易入籍，更多中國人能依親用健保，看病等更久，健保可能漲價、更早倒 (<a href='https://today.line.me/tw/v3/article/LX3qKMz'>看報導</a>)<br>😵提65歲以上免健保政見，健保加速破產，大家都沒得用",
+      "tag": []
+    },
+    {
+      "image": "https://scontent.ftpe7-3.fna.fbcdn.net/v/t39.30808-6/520311927_122137122644743461_6133184358094843185_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=lIuWV5yWO4sQ7kNvwEtykmB&_nc_oc=AdnZG5Nd8-HE7udHDzRxgKhH1kN31CftaSNWoOIVe46GxqAjrApUMB1xcoykO0NttYk&_nc_zt=23&_nc_ht=scontent.ftpe7-3.fna&_nc_gid=FmCEMS6T0p9zddSg7Afb2Q&oh=00_AfRAu_3p6WZt7LU1floy4IIFRfjtfa3R7rVpe1PTPQUhGg&oe=6895574A",
+      "title": "免巴氏量表，請不到看護",
+      "description": "😵看護已不足，把申請標準放寬，更多人能申請，重症者更難找到看護<br>😵供給若不足，費用恐提高，加重長照家庭負擔<br>►看&nbsp;<a href='https://news.pts.org.tw/article/762840'>社福團體說法</a>、<a href='https://udn.com/news/story/7266/8903212'>勞動部說明</a>、<a href='https://vip.udn.com/vip/story/122366/8916848'>聯合報報導</a>",
+      "tag": []
+    },
+    {
+      "image": "https://scontent.ftpe7-1.fna.fbcdn.net/v/t39.30808-6/526529751_122138726306743461_1950387385896889691_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=URgbWui1bccQ7kNvwFjxMH9&_nc_oc=AdlSmVybLeETA4iz1ZKhEYT0ryPGr0UNryV3oEEu0n9gyOllbe58a3iEpQGLX_BfzY4&_nc_zt=23&_nc_ht=scontent.ftpe7-1.fna&_nc_gid=DtXjR9Clc2jKibgI9luVmA&oh=00_AfRyxLsxvSVWd0JBLVelbMz7-YIO_YH6Quez1ZjCWqg4-g&oe=68954FD7",
+      "title": "治水又淹水，還敢刪預算？",
+      "description": "😵選前南投就淹水，立委當1年半，配合民眾黨刪預算，影響防洪計畫<br>😵結果7月又淹水(<a href='https://www.ettoday.net/news/20250709/2993330.htm'>新聞</a>)，12億治水工程在哪裡？",
+      "tag": []
+    },
+    {
+      "image": "https://scontent.ftpe7-4.fna.fbcdn.net/v/t39.30808-6/498843535_122126186690743461_8316220864674132945_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=lBMxxwyMRaEQ7kNvwFW0Z39&_nc_oc=AdkIaNIPthbgwid26mBlrqeI6cFcfyyPKBEf6F6sfkDsEZ5UIIPRhU187ygcdEr7oMM&_nc_zt=23&_nc_ht=scontent.ftpe7-4.fna&_nc_gid=LYKxHEBstS32MkSvjkvd-A&oh=00_AfQfb2IlOqr2kvPLckduF0noUAK7aYLho4NM6iciRLCzzQ&oe=6895463F",
+      "title": "垃圾問題，跳票又敷衍",
+      "description": "😵上任1年半，竹山垃圾只有打包處理，其它鄉鎮垃圾沒規劃解決<br>😵名間焚化爐毀茶農生計，也可能影響健康和地價，游顥為何裝沒看見？是要把垃圾丟在票最少的地方？",
+      "tag": []
+    },
+    {
+      "image": "citizenship.png",
+      "title": "中配拿身份，6年改4年",
+      "description": "🧐中配申請身分證，已經少一堆流程和條件，親屬還能享用健保(<a href='https://news.pts.org.tw/article/733781'>公視報導</a>)<br>😡游顥只縮短中配申請身份年限，哪裡公平？<br>😵更多中配家屬能用健保，健保更快倒",
+      "tag": []
+    },
+    {
+      "image": "reneged_policies.jpg",
+      "title": "選前大包票、選後大跳票",
+      "description": "上任一年半：<br>😡茶葉賣中國沒收到錢<br>&emsp;還要繼續賣？<br>😵南投人回家的路在哪？<br>😡為什麼凍結幼兒預算？<br>😥年輕人的工作在哪裡？<br>😵觀光推動在哪裡？",
+      "tag": []
+    },
+    {
+      "image": "penghu.jpg",
+      "title": "選上南投立委，馬上去澎湖",
+      "description": "😡選後政見還沒做，垃圾、交通、就業問題還沒解，馬上就去澎湖設服務處(<a href='https://today.line.me/tw/v3/article/PG1Lj8V'>新聞</a>)",
+      "tag": []
+    }
+  ]
+  </script>
+
+  <script>
+    const dataScript = document.getElementById('data-json');
+    const portfolioData = JSON.parse(dataScript.textContent);
+    const container = document.getElementById('portfolio');
+
+    portfolioData.forEach((item, index) => {
+      const article = document.createElement('article');
+      article.innerHTML = `
+        <h2>${index+1}. ${item.title}</h2>
+        <input type="checkbox" id="imgControl-${index}"/>
+        <label for="imgControl-${index}">
+            <div class="description">${item.description}</div>
+            <img src="${item.image}" alt="${item.title}" />
+        </label>
+        <br>
+      `;
+      container.appendChild(article);
+    });
+  </script>
+</body>
+</html>
